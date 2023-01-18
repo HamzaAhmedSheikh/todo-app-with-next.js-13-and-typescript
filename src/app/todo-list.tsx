@@ -1,6 +1,6 @@
 import Todo from "./todo";
 
-interface TodoObj {
+interface Todo {
   id: string;
   name: string;
   isDone: boolean;
@@ -18,10 +18,10 @@ export default async function TodoList() {
   return (
     <div>
       <ul style={{ listStyleType: "none", padding: 0 }}>
-        {todos.map((i: TodoObj) => {
+        {todos.map((t: Todo) => {
           return (
-            <li key={i.id} style={{ padding: "5px 0" }}>
-              <Todo todo={i} />
+            <li key={t.id} style={{ padding: "5px 0" }}>
+              <Todo todo={t} />
             </li>
           );
         })}
