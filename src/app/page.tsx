@@ -1,11 +1,11 @@
 import AddNewTodo from "./add-new-todo";
-import TodoList from "./todo-list";
+import  TodoList from "./todo-list";
 
-export default function Home() {
+export default async function Home() {
   return (
     <div>      
       <AddNewTodo />
-      <TodoList />        
+      { await TodoList() }     
     </div>
   )
 }
