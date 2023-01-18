@@ -26,8 +26,8 @@ export default function Todo({ todo }: any) {
         onChange={(e) => update(todo.id, e.target.checked, router.refresh)}
         checked={todo.isDone}
       />
-      <span>{todo.name}</span>
-      <button onClick={() => deleteTodo(todo.id, router.refresh)}>
+      <span style={{ margin: "5px", fontSize: "22px" }}>{todo.name}</span>
+      <button onClick={() => deleteTodo(todo.id, router.refresh)} style={{ margin: "5px" }}>
         Delete
       </button>
     </>

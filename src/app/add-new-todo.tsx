@@ -28,6 +28,7 @@ export default function AddNewTodo() {
           await addTodo(name, router.refresh);
           setName("");
         }}
+        style={{ margin: "5px" }}
       >
         Add
       </button>
