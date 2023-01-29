@@ -17,6 +17,8 @@ async function deleteTodo(id: string, refresh: () => void) {
 }
 
 export default function Todo({ todo }: any) {
+ 
+  
   const router = useRouter();
 
   return (

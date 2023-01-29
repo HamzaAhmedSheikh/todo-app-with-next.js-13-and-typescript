@@ -4,12 +4,14 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 async function addTodo(name: string, refresh: () => void) {
-  await fetch(`/api/todo/add`, {
+  const response = await fetch(`/api/todo/add`, {
     method: "POST",
     body: JSON.stringify({ name }),
   });
 
-  refresh();
+  if (response.status < 300) {
+    refresh();
+  }
 }
 
 
